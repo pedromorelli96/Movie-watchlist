@@ -69,7 +69,7 @@ async function getMovieIds(title) {
 
         let movieIds = [];
         const response = await fetch(
-            `http://www.omdbapi.com/?apikey=${apiKey}&s=${title}&type=movie`
+            `https://www.omdbapi.com/?apikey=${apiKey}&s=${title}&type=movie`
         );
         const data = await response.json();
         if (data.Response !== "False") {
