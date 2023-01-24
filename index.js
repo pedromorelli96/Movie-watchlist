@@ -92,7 +92,7 @@ async function getMovieInfo(movieIds) {
     try {
         for (const id of await movieIds) {
             const response = await fetch(
-                `http://www.omdbapi.com/?apikey=${apiKey}&i=${id}&type=movie`
+                `https://www.omdbapi.com/?apikey=${apiKey}&i=${id}&type=movie`
             );
             const data = await response.json();
             createMovieObject(id, data);
